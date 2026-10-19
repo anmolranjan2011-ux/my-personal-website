@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f8e6ed">
+	<title>Anmol's Little Corner</title>
+	<style>
+		:root { --ink:#dbd5c6; --muted:#be7b22; --pink:#cdc4be; --blush:#cd7b4b; --paper:#56340b; --line:#c7b59d; }
+		* { box-sizing:border-box; }
+		html { scroll-behavior:smooth; scroll-snap-type:y mandatory; }
+		body { margin:0; background-color:#654b1b; background-image:repeating-linear-gradient(to bottom,rgba(128, 88, 57, 0.92) 0 2px,transparent 2px 34px),repeating-linear-gradient(to right,rgba(255,255,255,.22) 0 1px,transparent 1px 34px),radial-gradient(rgba(115,48,77,.13) .7px,transparent .8px); background-size:auto,auto,5px 5px; background-attachment:fixed; color:var(--ink); font-family:"Trebuchet MS",Arial,sans-serif; }
+		nav a { color:var(--ink); font-size:.92rem; font-weight:700; text-decoration:none; }
+		nav a:hover, nav a:focus { color:var(--pink); }
+		.brand { color:var(--pink); font-weight:900; letter-spacing:.08em; }
+		nav ul { display:flex; gap:clamp(14px,3vw,34px); margin:0; padding:0; list-style:none; }
+		section { position:relative; display:grid; align-content:center; min-height:100vh; padding:110px clamp(24px,10vw,140px) 82px; overflow:hidden; scroll-snap-align:start; }
+		#home { background:radial-gradient(ellipse at 85% 25%,rgba(182, 179, 178, 0.62) 0,transparent 36%); }
+		#about { background:rgba(248,230,237,.4); }
+		#projects { background:rgba(253,243,247,.4); }
+		.eyebrow { color:var(--pink); font-size:.76rem; font-weight:900; letter-spacing:.2em; text-transform:uppercase; }
+		h1,h2,p { margin-top:0; }
+		h1 { max-width:760px; margin-bottom:18px; font-size:clamp(3.2rem,9vw,7rem); line-height:.98; letter-spacing:-.06em; }
+		h1 span { color:var(--pink); }
+		h2 { margin:12px 0 18px; font-size:clamp(2.5rem,6vw,4.5rem); line-height:1.05; letter-spacing:-.05em; }
+		.intro,.about-copy { max-width:650px; color:var(--muted); font-size:clamp(1rem,1.5vw,1.15rem); line-height:1.8; }
+		.tag { display:inline-block; margin:5px 7px 0 0; padding:9px 14px; border:1px solid var(--line); border-radius:99px; background:var(--paper); color:var(--muted); font-size:.85rem; }
+		.music-card,.about-card,.project-card { border:1px solid var(--line); border-radius:24px; background:rgba(114, 69, 9, 0.88); box-shadow:0 14px 36px rgba(100,48,70,.07); }
+		.music-card { width:min(100%,540px); margin-top:26px; padding:21px 25px; }
+		.music-card h3 { margin:0 0 10px; font-size:1rem; }
+		.songs { margin:0; padding-left:24px; color:var(--muted); line-height:1.9; }
+		.songs li::marker { color:var(--pink); font-weight:900; }
+		.about-card { max-width:780px; padding:clamp(24px,5vw,46px); border-color:#bb5e24; }
+		.project-card { display:flex; align-items:center; gap:18px; max-width:560px; padding:24px; color:var(--muted); }
+		.project-card strong { color:var(--ink); }
+		.project-icon { display:grid; flex:0 0 62px; height:62px; place-items:center; border-radius:19px; background:var(--blush); font-size:1.8rem; }
+		.scroll-hint { display:inline-flex; gap:9px; margin-top:24px; color:var(--pink); font-size:.88rem; font-weight:800; text-decoration:none; }
+		.corner-pet { position:absolute; right:clamp(16px,5vw,72px); bottom:22px; font-size:clamp(2.4rem,5vw,3.6rem); }
+		.corner-note { position:absolute; left:clamp(24px,8vw,110px); bottom:30px; color:#965b2b; font-size:.72rem; letter-spacing:.1em; }
+		@media (max-width:520px) { nav { padding:15px 17px; } .brand { font-size:.85rem; } nav ul { gap:12px; } nav a { font-size:.8rem; } section { padding-top:100px; } }
+		@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+	</style>
+</head>
+<body>
+	<nav aria-label="Main navigation">
+		<a class="brand" href="#home">♡ ANMOL</a>
+		<ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li></ul>
+	</nav>
+	<main>
+		<section id="home" aria-labelledby="home-title">
+			<div>
+				<div class="eyebrow">A little corner of the internet</div>
+				<h1 id="home-title">Hi, I'm <span>Anmol.</span></h1>
+				<p class="intro">Welcome to my cozy corner! I'm new to coding, curious about computers, and always making room for creativity, good music, and cute things.</p>
+				<span class="tag">💻 Tech lover</span><span class="tag">🎬 Video editor</span><span class="tag">🎧 Music on repeat</span>
+				<div class="music-card"><h3>♡ My song ranking</h3>
+					<ol class="songs"><li>Reflection — The Neighbourhood</li><li>Stress Relief</li><li>Love Me Back</li></ol>
+				</div>
+				<a class="scroll-hint" href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
+			</div>
+			<div class="corner-pet" role="img" aria-label="Cute cat decoration">🐱</div>
+		</section>
+		<section id="about" aria-labelledby="about-title">
+			<div class="about-card">
+				<div class="eyebrow">A bit about me</div>
+				<h2 id="about-title">Curious mind,<br>creative heart.</h2>
+				<p class="about-copy">I'm just getting started with coding and excited to learn more every day. I love computers and figuring out how things work. When I'm not exploring tech, I enjoy editing videos for my YouTube channel, listening to music, and especially love songs. This is my little space to share what I like and what I make.</p>
+				<span class="tag">Learning to code</span><span class="tag">YouTube creator</span><span class="tag">Love songs ♡</span>
+			</div>
+			<div class="corner-pet" role="img" aria-label="Cute dog decoration">🐶</div>
+			<div class="corner-note">MADE WITH ♡ AND A LITTLE </div>
+		</section>
+		<section id="projects" aria-labelledby="projects-title">
+			<div>
+				<div class="eyebrow">Things I'm making</div>
+				<h2 id="projects-title">My projects</h2>
+				<div class="project-card"><div class="project-icon" aria-hidden="true">✨</div><div><strong>None for now!</strong><br>I'm just getting started. Check back soon for new projects.</div></div>
+			</div>
+			<div class="corner-pet" role="img" aria-label="Cute cat and dog decoration">🐱 🐶</div>
+			<div class="corner-note">Contact: INSTAGRAM @anmol.pixelated </div>
+		</section>
+	</main>
+</body>
+</html>
